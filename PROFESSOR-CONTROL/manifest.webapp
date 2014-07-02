@@ -1,0 +1,12 @@
+{
+    "name":"Guia del maestro",
+    "developer": {
+        "name":"Edgar Israel Gonzalez Salgado",
+        "url":"http://www.myweb.com"
+    },
+    "description":"Almacenamiento y manejo",
+    "icons":{
+        "128":"/ito.ico"
+    }
+}
+

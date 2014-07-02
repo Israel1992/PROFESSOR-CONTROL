@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Perfil</title>
+
+
+<script src="jquery.js"></script>
+<script src="indexedDB.js"></script>
+<script src="controlDB.js"></script>
+<link href="reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="index.css" />
+
+</head>
+<body>
+	<div id="load"><div id="image"></div></div>
+	<header><div id="encabezado"><h1>AGREGAR GRUPOS</h1></div><div id="regreso"><a href="grupos.html">regresar</a></div></header>
+		<section>
+			<label style="color:white; font:bold 20px arial;">Numero de grupos:</label><br/>
+			<input placeholder='1' autofocus	title='Tu nombre' required type="text" name="cantidad" id="cantidad"  min="0" max="20" />
+			<button id="genera"> Aceptar</button>
+			
+			<div id="carga_registros">	
+			<link rel="stylesheet" href="add_grupos.css" />
+			</div>	
+		</section>
+		<footer>
+			<input type="button" id='next_registro' reg="gru" value="Aceptar"></input>
+			<div id="compatibilidad"></div>
+		</footer>
+</body>
+</html>

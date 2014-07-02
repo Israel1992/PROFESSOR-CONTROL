@@ -1,0 +1,59 @@
+html, body, section,header,footer,aside,div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size:16px;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+article,figcaption,figure,footer,header,hgroud,nav,section{
+	display:block;
+}
+
+
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	margin:0px;
+	padding:0px;
+	color: black;
+	background: #1A7B9F;
+	text-align: center;
+	overflow-x:hidden;}
+	
+ol,nav ul {
+	list-style: none;
+	
+}
+ul{list-style-type: none;}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}

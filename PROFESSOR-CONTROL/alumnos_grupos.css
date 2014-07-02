@@ -1,0 +1,41 @@
+#grupos_actuales{
+	overflow:scroll;
+	max-width:420px;
+	width:90%;
+	height:auto;
+	font:10px arial;
+	color:#999;
+	min-height:100px;
+	margin:auto;
+	text-align:center;
+	background:white;
+
+}
+
+.th{
+	width:520px;
+	height:40px;
+	background:#999;
+	color:white;
+}
+.th .td{
+  width:100px;
+  height:40px;
+  display:inline-block;
+  vertical-align:top;
+}
+.tb{
+	width:520px;
+	height:40px;
+	background:white;
+	color:black;
+}
+.tb .td{
+	width:100px;
+	height:40px;
+	display:inline-block;
+	vertical-align:top;
+}
+.td{
+	border:1px solid #999;
+}

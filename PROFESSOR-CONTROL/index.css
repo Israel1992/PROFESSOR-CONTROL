@@ -1,0 +1,125 @@
+
+#load{
+width:100%;
+height:100%;
+max-width:500px;
+background:url('trans.png');
+z-index:9999;
+position:absolute;
+}
+
+#load #image{
+position:absolute;
+width:148px;
+height:148px;
+left:50%;
+top:50%;
+margin-left:-74px;
+margin-top:-74px;
+background:url('load3d.gif');
+}
+
+
+header,section,footer{
+	max-width:450px;
+}
+
+header{
+	height:100px;
+	width:100%;
+	background:#303030 ;
+	padding:10px;
+}
+
+header #encabezado h1{
+	color:white;
+	font:bold 22px arial;
+}
+
+nav{
+	margin-top:-10px;
+	width:80%;
+	height:100%;
+	margin:auto;
+
+}
+
+section ul li{
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition:all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	border-radius: 0.5em 0.5em 0.5em 0.5em; 
+	-moz-border-radius: 0.5em 0.5em 0.5em 0.5em; 
+	-webkit-border-radius:0.5em 0.5em 0.5em 0.5em;
+	margin:auto;	background:white;
+	padding-top:20px; font:16px arial;
+	padding-bottom:20px;
+	margin-top:10px;
+	width:100%;
+}
+
+section ul li a:hover{
+	
+}
+section ul li:hover{
+	color:white;
+	cursor:pointer;
+	background:#303030;	
+}
+
+#encabezado{
+	float:left;
+	width:50%;
+	height:100%;
+	margin-top:15px;
+}
+#logo{
+	background:url('ito.png');
+	height:99px;
+	width:101px;
+	margin-right:10px;
+	float:right;
+}
+
+#regreso a{
+	padding:4px 5px 4px 5px;
+	font:18px arial;
+	color:black;
+	background:Gold;
+	border-radius: 0.5em 0.5em 0.5em 0.5em; 
+	-moz-border-radius: 0.5em 0.5em 0.5em 0.5em; 
+	-webkit-border-radius:0.5em 0.5em 0.5em 0.5em;
+	text-decoration:none;
+	
+}
+#regreso{
+	margin-top:30px;
+}
+
+footer{
+	height:80px;
+	width:100%;
+	background:#303030;
+	padding:10px;
+	font:12px arial;
+	color:white;
+}
+section{
+	min-height:250px;
+	height:auto;
+	width:100%;
+	font:bold 12px arial;
+	padding:10px;
+	padding-top:15px;
+	background:url('fondo.png');
+}
+input[type="text"]{
+width:50%;
+float:right;
+margin-right:20px;
+}
+
+body{
+
+background:white;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+
+<title>Perfil</title>
+
+
+<script src="jquery.js"></script>
+<script src="indexedDB.js"></script>
+<script src="controlDB.js"></script>
+<link href="reset.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="index.css" />
+
+</head>
+<body>
+	
+		<header><div id="encabezado"><h1>PROFESSOR-CONTROL</h1></div><div id="logo"></div></header>
+			<section>
+				<nav>
+					<ul>
+						<li onClick="window.location='grupos.html'">Grupos</li>
+						<li onClick="window.location='alumnos.html'">Alumnos</li>
+						<li onClick="window.location='lista.html'">Ver grupos de alumnos</li>
+					</ul>
+				</nav>
+			</section>
+		<footer>
+			<label>Eliminar base de datos</label><br/>
+			<input type="button" id="eliminar" value="Eliminar"/>
+			<input type="button" onClick="iniciar()" id="eliminar" value="Iniciar"/>
+		</footer>
+</body>
+</html>
