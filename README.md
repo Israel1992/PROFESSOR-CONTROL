@@ -13,8 +13,7 @@ var IndexDB = function() {
         name = null,
         version = null;
     var grup = new Array();
-//___________________________________________________________________________________
-//-----------------------------------------------------------------------------------
+
         init = function(dbname, dbversion) {
             name = dbname;
             version = dbversion;
@@ -38,19 +37,16 @@ var IndexDB = function() {
 							 objectStoreEvaluacion.createIndex("grupo", "grupo", { unique: false });
 					}
 				};
-				//----------------------------------------------------------------------------------
 				request.onsuccess = function(event) {
-					//alert("onsuccess: ");
-					//RESULTADO EN "DB"
-					
+
 					 db = event.target.result;
-					 //alert(db);
+
 				};
 				request.onerror = function(event) {
 					alert("Database error: " + event);
 				};
         },
-//-----------------------------------------------------------------------------------------------
+
     queryGrupos=function(){ 
 					trans = db.transaction(["grupos"], "readonly"),
 					store = trans.objectStore("grupos");
@@ -76,15 +72,14 @@ var IndexDB = function() {
 
 					};		
 		}
-//-----------------------------------------------------------------------------------------------	
+
 		mosOnlyGrupos=function(dbname, dbversion){
 			init(dbname, dbversion);
 			espera();
 			setTimeout (queryGrupos, 2000);
 		}
 
-//-----------------------------------------------------------------------------------------------
-        addAlumnos= function(){
+       addAlumnos= function(){
 			
 				var trans = db.transaction(["alumnos"], "readwrite"),
 					store = trans.objectStore("alumnos"),
@@ -112,7 +107,7 @@ var IndexDB = function() {
 
 		}
         
-//-----------------------------------------------------------------------------------------------
+
         addGrupos= function(){
 			
 				var trans = db.transaction(["grupos"], "readwrite"),
@@ -140,8 +135,8 @@ var IndexDB = function() {
 
 		}
         
-//-----------------------------------------------------------------------------------------------
-         add = function(dbname, dbversion) {
+
+        add = function(dbname, dbversion) {
            init(dbname, dbversion);  
            var tipo = $("#next_registro").attr("reg");
 			switch(tipo)
@@ -158,8 +153,8 @@ var IndexDB = function() {
           
             
         },
-//-----------------------------------------------------------------------------------------------
-        mostrar = function(dbname, dbversion) {
+
+       mostrar = function(dbname, dbversion) {
             init(dbname, dbversion);
             var tipo = $("#grupos_actuales").attr("reg");
 			switch(tipo)
@@ -273,9 +268,9 @@ var IndexDB = function() {
 			  break;	  
 			}	
         },   
-//-----------------------------------------------------------------------------------------------
+
         del = function(timeStamp) {
-            //6. Delete items
+
             var transaction = db.transaction(["grupos"], "readwrite");
             var store = transaction.objectStore("grupos");
 
@@ -290,7 +285,7 @@ var IndexDB = function() {
                 trace("Error deleting: " + e);
             };
         },
-//-----------------------------------------------------------------------------------------------
+
         AlumGrup= function(){
 			
 			init("gruposDB", 1);
@@ -336,7 +331,7 @@ var IndexDB = function() {
 			
 		
 		}, 
-//-----------------------------------------------------------------------------------------------
+
         deletedb = function(dbname) {
 
             var request = window.indexedDB.deleteDatabase(dbname);
@@ -350,7 +345,6 @@ var IndexDB = function() {
             };
         },
         
-//-----------------------------------------------------------------------------------------------
         constList = function(){
 			init("gruposDB", 1);
 			espera();
@@ -396,9 +390,9 @@ var IndexDB = function() {
 				 };					 
 			}, 2000); 			
 		},
-//-----------------------------------------------------------------------------------------------
+
         compatibility = function() {
-			//LO LLAMA EL METODO INIT
+
             window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB;
             window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction || window.OIDBTransaction;
             window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
@@ -414,8 +408,8 @@ var IndexDB = function() {
             return false;
 
         },
-//-----------------------------------------------------------------------------------------------
-//-----------------------------------------------------------------------------------------------
+
+
         addLista = function(ssnA) {
 			init("gruposDB", 1);
 			espera();
@@ -469,7 +463,7 @@ var IndexDB = function() {
 				}
 			}, 4000); 
         },
-//------------------------------------------------------------------------------------------------
+
 		getAsist = function(){
 			 
 			var objectStore = db.transaction("evaluacion").objectStore("evaluacion");
@@ -491,7 +485,7 @@ var IndexDB = function() {
 				};
 			
 	},
-//------------------------------------------------------------------------------------------------
+
 	setAsist = function(){
 		var request = db.transaction(["evaluacion"], "readwrite")
                 .objectStore("evaluacion")
@@ -500,15 +494,9 @@ var IndexDB = function() {
 			  // It's gone!
 			};	
 	},
-//------------------------------------------------------------------------------------------------
+
 	mosEvaluacion = function(){
-		/*var request = db.transaction(["evaluacion"], "readwrite")
-                .objectStore("evaluacion")
-                .delete("444-44-4444");
-			request.onsuccess = function(event) {
-			  // It's gone!
-			};	
-			*/
+	
 			transa = db.transaction(["evaluacion"], "readonly"),
 					almacenamiento = transa.objectStore("evaluacion");
 					
@@ -540,3 +528,5 @@ var IndexDB = function() {
 			addLista:addLista
 	};
 }
+
+
