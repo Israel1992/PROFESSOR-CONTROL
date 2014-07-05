@@ -3,8 +3,6 @@ PROFESSOR-CONTROL
 
 Control de horario y grupos de alumnos, base de datos del lado del cliente con indexeddb.
 
-Realizada para Firefox OS.
-
 Este es el codigo principal y la logica del almacenamiento relacional:
 
 
